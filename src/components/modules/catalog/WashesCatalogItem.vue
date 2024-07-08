@@ -6,7 +6,7 @@
 			img: string
 			price: string
 			title: string
-			category: string
+			category?: string
 		}
 	}
 	const { item } = defineProps<Props>()
