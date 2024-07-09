@@ -22,10 +22,10 @@
 	<div
 		@mouseenter="setIsShow"
 		@mouseleave="setIsShow"
-		class="max-w-[383px] max-h-[440px] bg-white flex flex-col gap-5 relative cursor-pointer">
+		class="max-w-[300px] max-h-[400px] bg-white flex flex-col gap-5 relative cursor-pointer">
 		<RouterLink :to="{ name: 'byTitle', params: { title: item.title } }">
 		<img
-			class="object-contain max-w-[342px] max-h-[210px] mb-8 mx-auto"
+			class="object-contain max-w-[290px] max-h-[210px] mb-8 mx-auto"
 			:src="img"
 			:alt="title" />
 			</RouterLink>

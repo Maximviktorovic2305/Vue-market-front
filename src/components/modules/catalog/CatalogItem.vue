@@ -21,7 +21,7 @@
 	<div
 		@mouseenter="toShow"
 		@mouseleave="toShow"
-		class="w-[383px] h-[440px] max-h-[511px] text-white relative">
+		class="w-[250px] h-[300px] max-h-[511px] text-white relative">
 		<div
 			:class="[
 				'absolute duration-300 bottom-0 left-0 right-0',

@@ -38,7 +38,7 @@
 					<div
 						class="text-secondary w-full h-[400px] bg-white mx-auto flex justify-between p-5 shadow shadow-primary rounded-xl">
 						<img
-							class="w-[350px] h-[280px] m-auto object-contain p-5"
+							class="w-[300px] h-[250px] m-auto object-contain p-5"
 							:src="item?.img"
 							:alt="item?.img" />
 						<div class="flex flex-col justify-between">
@@ -47,10 +47,7 @@
 								Сейчас столько магазинов сантехники, что, казалось бы, купить
 								раковину для ванной проще простого. Однако даже у крупных
 								поставщиков представлены не все существующие типы раковин, а
-								продавец предложит то, что есть в ассортименте. Мы подготовили
-								этот обзор, чтобы вы владели полной информацией, знали, что
-								искать и не пропустили раковину, подходящую именно для вашей
-								ванной комнаты.
+								продавец предложит то, что есть в ассортименте.
 							</div>
 							<div class="flex items-center justify-between px-[10%]">
 								<div class="font-bold">Стоимость: {{ item?.price }} р.</div>

@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "vite --host",
 		"build": "vue-tsc -b && vite build",
-		"start": "vite preview"
+		"start": "vite preview --host"
 	},
 	"dependencies": {
 		"@radix-icons/vue": "^1.0.0",
