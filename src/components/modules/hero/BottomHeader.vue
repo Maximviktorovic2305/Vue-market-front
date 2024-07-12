@@ -9,7 +9,7 @@
 </script>
 
 <template>
-	<div class="flex items-center justify-between mt-[4%] text-black">
+	<div class="wrapper flex items-center justify-between mt-[4%] text-black">
 		<RouterLink to="/washes">
 			<span class="cursor-pointer hover:text-white duration-300">Мойки</span>
 		</RouterLink>
@@ -58,5 +58,14 @@
 <style scoped>
 	.arraw-rotate {
 		transform: rotate(180deg);
+	}   
+
+	@media screen and (max-width: 750px) {
+		.wrapper {
+			display: grid;   
+			grid-template-columns: 1fr 1fr 1fr;
+			font-size: 14px;
+		}
+
 	}
 </style>

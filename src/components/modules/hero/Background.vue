@@ -18,13 +18,28 @@
 </script>
 
 <template>
-	<Carousel class="bg-[#ECECEC]" :plugins="[plugin]">
-		<CarouselContent class="max-w-full w-full max-h-[812px] h-full">
-			<CarouselItem v-for="(slide, index) of slides" :key="index">
-				<div class="-p-1">
-					<img class="w-full h-full object-cover" :src="slide" alt="hero" />
+	<Carousel class="bg-inherit" :plugins="[plugin]">
+		<CarouselContent class="max-w-full w-full h-full">
+			<CarouselItem
+				class="item w-full h-full"
+				v-for="(slide, index) of slides"
+				:key="index">
+				<div class="-p-1 ">
+					<img class="item object-fill w-full max-h-full" :src="slide" alt="hero" />
 				</div>
 			</CarouselItem>
 		</CarouselContent>
 	</Carousel>
 </template>
+
+<style scoped>
+
+@media screen and (max-width: 600px) {
+		.item {
+	height: 250px;
+}
+	
+	}
+
+
+</style>

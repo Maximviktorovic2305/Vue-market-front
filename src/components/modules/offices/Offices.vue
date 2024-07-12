@@ -1,122 +1,33 @@
-<script lang="ts" setup></script>
-
-<!-- <template>
-		<div
-			class="mt-[220px] pt-[50px] pb-[240px] text-[20px] px-[250px] bg-[#ECECEC] flex items-center justify-between">
-			<div
-				v-for="office of offices"
-				:key="office.address"
-				@click="click"
-				class="flex items-center gap-3 relative">
-				<span class="cursor-pointer">{{ office.city }}</span>
-				<span class="pt-2"
-					><img
-						:class="['duration-300', isHowCitiesModal ? 'arraw-rotate' : '']"
-						src="/arrow-black.png"
-						alt="arrow"
-				/></span>
-				<div
-					class="flex flex-col gap-3 absolute top-9 left-3 bg-[#ECECEC] p-5 animate-drop-down"
-					v-if="isHowCitiesModal">
-					<span class="cursor-pointer text-[18px]"
-						>офис: {{ office.address }}</span
-					>
-					<div class="flex gap-3 items-center">
-						<img src="/offices/email.png" alt="email" />
-						<span class="cursor-pointer text-[18px] pb-0.5">{{
-							office.mail
-						}}</span>
-					</div>
-					<div class="flex gap-3 items-center">
-						<img src="/offices/phone.png" alt="phone" />
-						<span class="cursor-pointer text-[18px] pb-0.5">{{
-							office.phone
-						}}</span>
-					</div>
-				</div>
-			</div>
-		</div>
-</template>
-
-<style scoped>
-	.arraw-rotate {
-		transform: rotate(180deg);
-	}
-</style> -->
+<script lang="ts" setup>
+	import { offices } from '../../../constants'
+</script>
 
 <template>
 	<div
-		class="flex flex-col gap-7 mt-[210px] pt-[50px] px-[250px] pb-[80px] bg-[#ECECEC]">
+		class="md:px-[250px] py-10 bg-[#ECECEC] offices">
 		<div class="max-w-[380px] text-center mx-auto mb-5">
-			<div class="text-black text-center text-[28px] mb-2 font-bold">
+			<div
+				class="text-black text-center text-[28px] mb-2 font-bold header-title">
 				Наши офисы в России
 			</div>
 			<div class="w-full bg-primary h-[2px]"></div>
 		</div>
 		<ul class="flex items-center justify-between">
-			<li>
-				<a class="menu">
-					<h2 class="menu-title">Москва</h2>
+			<li v-for="office of offices" :key="office.city">
+				<div class="menu">
+					<h2 class="menu-title">{{ office.city }}</h2>
 					<ul class="menu-dropdown">
-						<li class="mb-2">ул. Ленина, 45</li>
+						<li class="mb-2">{{ office.address }}</li>
 						<li class="flex items-center gap-2 mb-2">
 							<img src="/offices/email.png" alt="email" />
-							<span>email@mail.ru</span>
+							<span>{{ office.mail }}</span>
 						</li>
 						<li class="flex items-center gap-2 mb-2">
 							<img src="/offices/phone.png" alt="email" />
-							<span>8 999 999 ?? ??</span>
+							<span>{{ office.phone }}</span>
 						</li>
 					</ul>
-				</a>
-			</li>
-			<li>
-				<a class="menu">
-					<h2 class="menu-title menu-title_2nd">Казань</h2>
-					<ul class="menu-dropdown">
-						<li class="mb-2">ул. Первая, 49</li>
-						<li class="flex items-center gap-2 mb-2">
-							<img src="/offices/email.png" alt="email" />
-							<span>email@mail.ru</span>
-						</li>
-						<li class="flex items-center gap-2 mb-2">
-							<img src="/offices/phone.png" alt="email" />
-							<span>8 999 999 ?? ??</span>
-						</li>
-					</ul>
-				</a>
-			</li>
-			<li>
-				<a class="menu">
-					<h2 class="menu-title menu-title_3rd">Хабаровск</h2>
-					<ul class="menu-dropdown">
-						<li class="mb-2">ул. Темная, 35</li>
-						<li class="flex items-center gap-2 mb-2">
-							<img src="/offices/email.png" alt="email" />
-							<span>email@mail.ru</span>
-						</li>
-						<li class="flex items-center gap-2 mb-2">
-							<img src="/offices/phone.png" alt="email" />
-							<span>8 999 999 ?? ??</span>
-						</li>
-					</ul>
-				</a>
-			</li>
-			<li>
-				<a class="menu">
-					<h2 class="menu-title menu-title_4th">Якутск</h2>
-					<ul class="menu-dropdown">
-						<li class="mb-2">ул. Зеленая, 24</li>
-						<li class="flex items-center gap-2 mb-2">
-							<img src="/offices/email.png" alt="email" />
-							<span>email@mail.ru</span>
-						</li>
-						<li class="flex items-center gap-2 mb-2">
-							<img src="/offices/phone.png" alt="email" />
-							<span>8 999 999 ?? ??</span>
-						</li>
-					</ul>
-				</a>
+				</div>
 			</li>
 		</ul>
 	</div>
@@ -299,4 +210,6 @@
 	.hList > * + * {
 		margin-left: 0;
 	}
+
+
 </style>

@@ -12,7 +12,7 @@
 			<span class="hover:text-black duration-300">Menu</span>
 		</div>
 		<RouterLink to="/">
-			<img src="/hero/logo.png" alt="logo" />
+			<img class="logo" src="/hero/logo.png" alt="logo" />
 		</RouterLink>
 		<div class="flex gap-3 items-center">
 			<img class="cursor-pointer" src="/hero/arrows.png" alt="arrows" />
@@ -30,3 +30,14 @@
 		</div>
 	</div>
 </template>
+
+<style scoped>
+@media screen and (max-width: 750px) {
+		.logo {
+			display: none;
+		}
+		.header-span {
+			font-size: 14px;
+		}
+	}
+</style>
